@@ -124,27 +124,51 @@ export default function RecommendationsPage() {
           </div>
         </div>
 
-        {/* Continue Button */}
-        <button
-          onClick={handleFinish}
-          className="group relative px-12 py-5 rounded-full 
-                   bg-well-water/20 hover:bg-well-water/30 
-                   transition-calm
-                   shadow-lg hover:well-glow
-                   border border-well-glow/30 hover:border-well-glow/60
-                   backdrop-blur-sm
-                   animate-scale-gentle"
-          style={{ animationDelay: "0.8s" }}
-        >
-          <span className="text-xl font-light tracking-widest text-well-whisper 
-                         group-hover:text-white transition-calm">
-            Complete Journey
-          </span>
-          
-          {/* Subtle glow effect */}
-          <div className="absolute inset-0 rounded-full bg-well-glow/20 blur-xl 
-                        opacity-0 group-hover:opacity-100 transition-calm -z-10" />
-        </button>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <button
+            onClick={() => router.push("/game")}
+            className="group relative px-10 py-5 rounded-full 
+                     bg-gradient-to-r from-purple-600/20 to-blue-600/20 
+                     hover:from-purple-600/30 hover:to-blue-600/30
+                     transition-calm
+                     shadow-lg hover:shadow-purple-500/30
+                     border border-purple-500/30 hover:border-purple-500/60
+                     backdrop-blur-sm
+                     animate-scale-gentle"
+            style={{ animationDelay: "0.7s" }}
+          >
+            <span className="text-xl font-light tracking-widest text-well-whisper 
+                           group-hover:text-white transition-calm flex items-center gap-3">
+              <span className="text-2xl">🎮</span>
+              Train Your Mind
+            </span>
+            
+            <div className="absolute inset-0 rounded-full bg-purple-500/20 blur-xl 
+                          opacity-0 group-hover:opacity-100 transition-calm -z-10" />
+          </button>
+
+          <button
+            onClick={handleFinish}
+            className="group relative px-12 py-5 rounded-full 
+                     bg-well-water/20 hover:bg-well-water/30 
+                     transition-calm
+                     shadow-lg hover:well-glow
+                     border border-well-glow/30 hover:border-well-glow/60
+                     backdrop-blur-sm
+                     animate-scale-gentle"
+            style={{ animationDelay: "0.8s" }}
+          >
+            <span className="text-xl font-light tracking-widest text-well-whisper 
+                           group-hover:text-white transition-calm">
+              Complete Journey
+            </span>
+            
+            {/* Subtle glow effect */}
+            <div className="absolute inset-0 rounded-full bg-well-glow/20 blur-xl 
+                          opacity-0 group-hover:opacity-100 transition-calm -z-10" />
+          </button>
+        </div>
       </div>
 
       {/* Floating ripples */}

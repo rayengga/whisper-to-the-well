@@ -34,9 +34,9 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { emotionAnalyzer } from '@/app/api/apiAI/lib/emotionAnalyzer';
-import { emotionStore, EmotionEntry } from '@/app/api/apiAI/lib/emotionStore';
-import { analyzeTrend } from '@/app/api/apiAI/lib/trendAnalysis';
+import { emotionAnalyzer } from '@/lib/emotionAnalyzer';
+import { emotionStore, EmotionEntry } from '@/lib/emotionStore';
+import { analyzeTrend } from '@/lib/trendAnalysis';
 
 // Types
 interface AnalyzeRequest {

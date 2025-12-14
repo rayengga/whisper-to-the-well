@@ -15,7 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { emotionStore } from '@/app/api/apiAI/lib/emotionStore';
+import { emotionStore } from '@/lib/emotionStore';
 
 export async function GET(request: NextRequest) {
   try {
