@@ -1,0 +1,153 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Emotion Analysis API",
+  "dateExported": "2025-12-14",
+  "version": "1.0",
+  "folders": [],
+  "requests": [
+    {
+      "name": "Check API Status",
+      "method": "GET",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [],
+      "body": null,
+      "tests": []
+    },
+    {
+      "name": "Analyze Happy Emotion",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"I am so happy and excited today! Everything is going great!\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "name": "Analyze Sad Emotion",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"I feel so lonely and sad. Nothing seems to work out.\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "name": "Analyze Angry Emotion",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"This is completely unacceptable! I am so frustrated and angry!\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "name": "Analyze Fearful Emotion",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"I am really anxious and scared about the upcoming exam.\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "name": "Analyze Mixed Emotions",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"I am nervous but also excited about this new opportunity.\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "name": "Get History (Last 10)",
+      "method": "GET",
+      "url": "http://localhost:3000/api/history?limit=10",
+      "headers": [],
+      "body": null,
+      "tests": []
+    },
+    {
+      "name": "Get History (Last 5)",
+      "method": "GET",
+      "url": "http://localhost:3000/api/history?limit=5",
+      "headers": [],
+      "body": null,
+      "tests": []
+    },
+    {
+      "name": "Get Statistics",
+      "method": "GET",
+      "url": "http://localhost:3000/api/stats",
+      "headers": [],
+      "body": null,
+      "tests": []
+    },
+    {
+      "name": "Test Error - Empty Text",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"text\": \"\"\n}"
+      },
+      "tests": []
+    },
+    {
+      "name": "Test Error - Missing Text Field",
+      "method": "POST",
+      "url": "http://localhost:3000/api/analyze",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"message\": \"hello\"\n}"
+      },
+      "tests": []
+    }
+  ]
+}
